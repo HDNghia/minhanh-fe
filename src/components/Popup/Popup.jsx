@@ -25,7 +25,7 @@ const Popup = ({ orderPopup, setOrderPopup }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:3000/api/contacts", {
+      const response = await fetch("https://minhanh.wealthfarming.org/api/contacts", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -69,6 +69,10 @@ const Footer = () => {
                 <FaPhone />
                 +84 905020856
               </p>
+              <p className="flex items-center gap-2">
+                <FaPhone />
+                +84 794195936
+              </p>
               <p className="flex items-center gap-2 mt-2">
                 <FaMapLocation />
                 Lô 19B2.1 Lê Văn Hiến, Q.Ngũ Hành Sơn, TP Đà Nẵng, Da Nang,

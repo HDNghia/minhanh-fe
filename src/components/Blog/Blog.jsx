@@ -9,7 +9,7 @@ const BlogPage = () => {
     useEffect(() => {
         const fetchBlogs = async () => {
             try {
-                const response = await axios.get("http://localhost:3000/api/globals/post-recommend?depth=2");
+                const response = await axios.get("https://minhanh.wealthfarming.org/api/globals/post-recommend?depth=2");
                 const { data } = response;
 
                 const formattedBlogs = [
@@ -18,7 +18,7 @@ const BlogPage = () => {
                         title: data.post_1.title.trim(),
                         slug: data.post_1.slug,
                         excerpt: data.except_1,
-                        image: `http://localhost:3000${data.post_1.image.url}`,
+                        image: `https://minhanh.wealthfarming.org${data.post_1.image.url}`,
                         date: new Date(data.post_1.updatedAt).toLocaleDateString("vi-VN"),
                     },
                     {
@@ -26,7 +26,7 @@ const BlogPage = () => {
                         title: data.post_2.title.trim(),
                         slug: data.post_2.slug,
                         excerpt: data.except_2,
-                        image: `http://localhost:3000${data.post_2.image.url}`,
+                        image: `https://minhanh.wealthfarming.org${data.post_2.image.url}`,
                         date: new Date(data.post_2.updatedAt).toLocaleDateString("vi-VN"),
                     },
                     {
@@ -34,7 +34,7 @@ const BlogPage = () => {
                         title: data.post_3.title.trim(),
                         slug: data.post_3.slug,
                         excerpt: data.except_3,
-                        image: `http://localhost:3000${data.post_3.image.url}`,
+                        image: `https://minhanh.wealthfarming.org${data.post_3.image.url}`,
                         date: new Date(data.post_3.updatedAt).toLocaleDateString("vi-VN"),
                     },
                 ];

@@ -14,7 +14,7 @@ const BlogDetailPage = () => {
         // Fetch data from API
         const fetchBlogs = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/api/posts?where[slug][equals]=${slug}`);
+                const response = await axios.get(`https://minhanh.wealthfarming.org/api/posts?where[slug][equals]=${slug}`);
                 const fetchedData = response.data.docs;
 
                 // Transform API response to desired format
@@ -22,11 +22,10 @@ const BlogDetailPage = () => {
                     title: blog.title,
                     slug: blog.slug,
                     date: new Date(blog.createdAt).toLocaleDateString('vi-VN'),
-                    author: blog.author.email.split('@')[0], // Extract name from email
+                    author: blog.author.full_name, // Extract name from email
                     content: blog.content.root.children.map((child) => renderContent(child)).join(' '),
-                    image: 'http://localhost:3000' + blog.image.url,
+                    image: 'https://minhanh.wealthfarming.org' + blog.image.url,
                 }));
-                console.log('check formattedBlogs: ', formattedBlogs);
 
                 setBlogs(formattedBlogs[0]);
             } catch (error) {

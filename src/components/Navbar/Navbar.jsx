@@ -51,7 +51,7 @@ const Navbar = ({ handleOrderPopup }) => {
                   alt="Logo"
                   className="w-12 h-12 rounded-full shadow-lg transition-transform duration-300"
                 />
-                <span className="tracking-wide">Minh Ánh</span>
+                <span className="tracking-wide">Duy Nam</span>
               </a>
             </div>
 

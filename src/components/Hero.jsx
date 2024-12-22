@@ -10,7 +10,7 @@ const Hero = ({ handleOrderPopup }) => {
     const fetchProducts = async () => {
       try {
         const response = await fetch(
-          "http://localhost:3000/api/globals/product-recommend?depth=1"
+          "https://minhanh.wealthfarming.org/api/globals/product-recommend?depth=1"
         );
         const data = await response.json();
 
@@ -65,7 +65,7 @@ const Hero = ({ handleOrderPopup }) => {
               className="flex flex-col justify-center gap-6 text-center sm:text-left"
             >
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                An nghỉ bình yên
+                An nghỉ bình yên 
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
                   với dịch vụ nghĩa trang cao cấp
                 </span>
@@ -91,7 +91,7 @@ const Hero = ({ handleOrderPopup }) => {
               <div className="relative h-[300px] sm:h-[400px] w-full overflow-hidden rounded-lg shadow-lg bg-gray-100 flex justify-center items-center">
                 {selectedImage ? (
                   <img
-                    src={`http://localhost:3000${selectedImage}`}
+                    src={`https://minhanh.wealthfarming.org${selectedImage}`}
                     alt="Hình ảnh khu nghĩa trang"
                     className="object-cover h-full w-auto hover:scale-110 transform duration-300"
                   />
@@ -111,7 +111,7 @@ const Hero = ({ handleOrderPopup }) => {
                     }`}
                   >
                     <img
-                      src={`http://localhost:3000${product.imageUrl}`}
+                      src={`https://minhanh.wealthfarming.org${product.imageUrl}`}
                       alt={product.title}
                       className="w-16 h-16 rounded-full object-cover"
                     />

@@ -27,7 +27,7 @@ const Products = ({ handleOrderPopup }) => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "http://localhost:3000/api/globals/product-recommend?depth=1&draft=false&locale=undefined"
+          "https://minhanh.wealthfarming.org/api/globals/product-recommend?depth=1&draft=false&locale=undefined"
         );
         const data = await response.json();
 
@@ -36,7 +36,7 @@ const Products = ({ handleOrderPopup }) => {
           {
             id: data.product_1.id,
             title: data.product_1.title,
-            image: `http://localhost:3000${data.image_1.url}`, // Assuming URL needs to be used as an image source
+            image: `https://minhanh.wealthfarming.org${data.image_1.url}`, // Assuming URL needs to be used as an image source
             description: data.product_1.description,
             price: `${data.product_1.price}`,
             delay: 0.5,
@@ -44,7 +44,7 @@ const Products = ({ handleOrderPopup }) => {
           {
             id: data.product_2.id,
             title: data.product_2.title,
-            image: `http://localhost:3000${data.image_2.url}`,
+            image: `https://minhanh.wealthfarming.org${data.image_2.url}`,
             description: data.product_2.description,
             price: `${data.product_2.price}`,
             delay: 0.8,
@@ -52,7 +52,7 @@ const Products = ({ handleOrderPopup }) => {
           {
             id: data.product_3.id,
             title: data.product_3.title,
-            image: `http://localhost:3000${data.image_3.url}`,
+            image: `https://minhanh.wealthfarming.org${data.image_3.url}`,
             description: data.product_3.description,
             price: `${data.product_3.price}`,
             delay: 1.1,

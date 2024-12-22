@@ -29,7 +29,7 @@ const FAQ = () => {
   useEffect(() => {
     const fetchFAQData = async () => {
       try {
-        const response = await fetch("http://localhost:3000/api/questions?limit=5");
+        const response = await fetch("https://minhanh.wealthfarming.org/api/questions?limit=5");
         const data = await response.json();
 
         // Map the API response to the desired format
