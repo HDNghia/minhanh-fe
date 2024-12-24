@@ -65,13 +65,13 @@ const Hero = ({ handleOrderPopup }) => {
               className="flex flex-col justify-center gap-6 text-center sm:text-left"
             >
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
-                An nghỉ bình yên 
+                Chuyên cung cấp&nbsp;
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-purple-500 to-pink-500">
-                  với dịch vụ nghĩa trang cao cấp
+                   dịch vụ chất lượng cao dành cho nghĩa trang
                 </span>
               </h1>
               <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300">
-                Chúng tôi cung cấp các giải pháp an nghỉ trang nghiêm, ý nghĩa, đảm bảo sự yên tĩnh và tôn trọng dành cho người thân yêu của bạn.
+                Bao gồm bia mộ, lăng mộ, và các vật phẩm tưởng niệm. Hãy để chúng tôi đồng hành cùng bạn trong việc tạo nên một nơi an nghỉ xứng đáng, trọn vẹn ý nghĩa và lòng tri ân.
               </p>
               <button
                 className="bg-gradient-to-r from-purple-500 to-pink-500 hover:scale-105 transform duration-200 text-white py-3 px-6 rounded-lg shadow-md"
@@ -104,11 +104,10 @@ const Hero = ({ handleOrderPopup }) => {
                   <button
                     key={product.id}
                     onClick={() => setSelectedImage(product.imageUrl)}
-                    className={`rounded-full p-1 transition-transform duration-200 border-2 ${
-                      selectedImage === product.imageUrl
+                    className={`rounded-full p-1 transition-transform duration-200 border-2 ${selectedImage === product.imageUrl
                         ? "border-purple-500 scale-105"
                         : "border-gray-300 hover:scale-105"
-                    }`}
+                      }`}
                   >
                     <img
                       src={`https://minhanh.wealthfarming.org${product.imageUrl}`}
